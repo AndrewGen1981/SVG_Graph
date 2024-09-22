@@ -1,0 +1,43 @@
+svg {
+    /* --color-stop-1: transparent; */
+    --color-stop-1: #fff;
+    --color-stop-2: hsla(0, 90%, 81%);
+    --color-stop-3: hsla(0, 82%, 71%);
+
+    width: min(100%, 1100px);
+    transform: scaleY(-1);
+
+    --boredr_col: #c9c9c9;
+    --line_col: gray;
+
+    border-top: 2px solid var(--boredr_col, gray);
+    border-left: 2px solid var(--boredr_col, gray);
+}
+
+
+svg#graph1 {
+    /* --color-stop-1: transparent; */
+    --color-stop-1: #fff;
+    --color-stop-2: hsl(110, 90%, 81%);
+    --color-stop-3: hsla(110, 82%, 71%);
+
+    position: absolute;
+    top: 8px; left: 8px;
+}
+
+
+svg .grid-line {
+    stroke: var(--line_col, gray);
+    stroke-width: 0.25px;
+}
+svg .subgrid-line {
+    stroke: var(--line_col, gray);
+    stroke-dasharray: 0.5px 5px;
+}
+
+svg path {
+    stroke: var(--color-stop-3);
+    stroke-width: 3px;
+    stroke-linejoin: round;
+    stroke-opacity: 0.5;
+}
