@@ -16,7 +16,6 @@ svg {
 
 
 svg#graph1 {
-    /* --color-stop-1: transparent; */
     --color-stop-1: #fff;
     --color-stop-2: hsl(110, 90%, 81%);
     --color-stop-3: hsla(110, 82%, 71%);
