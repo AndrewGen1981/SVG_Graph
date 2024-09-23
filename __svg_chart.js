@@ -126,10 +126,11 @@ function getChartHTML(graphData = {}) {
     const gradientID = `gr${ Math.round(Math.random() * 1000) }`
     
     const valStep = Math.round((x2 - x1) / (data.length - 1))
-    const maxVal = data.reduce((acc, cur) => cur > acc ? cur : acc ,data[0])
-    
+
+    // const maxVal = data.reduce((acc, cur) => cur > acc ? cur : acc ,data[0])
+    const maxVal = Math.max(...data)
     const lineRatio = y2 / maxVal
-    // const dataHTML = getLinePathElement(data, lineRatio, valStep, isFill, gradientID)
+
     const dataHTML =
     isCurv === "line" ? getLinePathElement(data, lineRatio, valStep, isFill, gradientID) :
     isCurv === "curv" ? getCurvPathElement(data, lineRatio, valStep, isFill, gradientID) :
